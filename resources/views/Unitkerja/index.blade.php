@@ -1,4 +1,4 @@
-@include('periksa.header')
+@include('admin.header')
 @include('admin.sidebar')
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
@@ -13,7 +13,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Jadwal Periksa</li>
+                            <li class="breadcrumb-item active">Unit kerja</li>
                         </ol>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Periksa</h3>
+                    <h3 class="card-title">Unit Kerja</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -38,31 +38,29 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h1 class="my-4">Jadwal Periksa</h1>
+                    <h1 class="my-4"> Unit Kerja</h1>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Tanggal</th>
-                                <th>Berat Badan</th>
-                                <th>Tinggi Badan</th>
-                                <th>Tensi</th>
-                                <th>Keterangan</th>
-                                <th>ID Pasien</th>
-                                <th>ID Dokter</th>
+                            <th>ID</th>
+                                    <th>Nama</th>
+                                    <th>Lokasi</th>
+                                    <th>Keterangan</th>
+                                    <th>Created At</th>
+                                    <th>Updated At</th>
+                                    <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($jadwal_periksa as $periksa)
+                            @foreach ($Unitkerja as $unitkerja)
                                 <tr>
-                                    <td>{{ $periksa->id }}</td>
-                                    <td>{{ $periksa->tgl }}</td>
-                                    <td>{{ $periksa->berat }}</td>
-                                    <td>{{ $periksa->tinggi }}</td>
-                                    <td>{{ $periksa->tensi }}</td>
-                                    <td>{{ $periksa->keterangan }}</td>
-                                    <td>{{ $periksa->id_pasien }}</td>
-                                    <td>{{ $periksa->id_dokter }}</td>
+                                    <td>{{ $Unitkerja->id }}</td>
+                                    <td>{{ $Unitkerja->nama }}</td>
+                                    <td>{{ $Unitkerja->lokasi }}</td>
+                                    <td>{{ $Unitkerja->keterangan }}</td>
+                                    <td>{{ $Unitkerja->created_at}}</td>
+                                    <td>{{ $Unitkerja->updated_a }}</td>
+                                   
                                 </tr>
                             @endforeach
                         </tbody>
@@ -70,7 +68,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    Tugas Prakitkum 11 || Diah ayu puspasari || 0110223052 || Teknik Informatika 2302
+                    Tugas Prakitkum 11 || Pathi || 0110223068|| Teknik Informatika 2302
                 </div>
                 <!-- /.card-footer-->
             </div>

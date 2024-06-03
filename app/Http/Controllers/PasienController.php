@@ -21,7 +21,7 @@ class PasienController extends Controller
      */
     public function create()
     {
-        //
+        return view('pasien.create');
     }
 
     /**
@@ -29,7 +29,29 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $request->validate([
+            'kode' => 'required|string',
+            'nama' => 'required|string',
+            'tmp_lahir' => 'required|string',
+            'tgl_lahir' => 'required|date',
+            'gender' => 'required|string',
+            'email' => 'required|string',
+            'alamat' => 'required|string',
+            ]);
+            
+            pasien::create([
+                'kode' => $request->kode,
+                'nama' => $request->nama,
+                'tmp_lahir' => $request->tmp_lahir,
+                'tgl_lahir' => $request->tgl_lahir,
+                'gender' => $request->gender,
+                'email' => $request->email,
+                'alamat' => $request->alamat,
+            ]);
+
+            
+            return redirect()->route('pasiens.index');
     }
 
     /**
@@ -37,7 +59,7 @@ class PasienController extends Controller
      */
     public function show(Pasien $pasien)
     {
-        //
+        return view('pasien.show', compact('pasien'));
     }
 
     /**
@@ -61,6 +83,8 @@ class PasienController extends Controller
      */
     public function destroy(Pasien $pasien)
     {
+        $pasien->delete();
         //
+        return redirect()->route('pasiens.index')->with('success', 'Pasien deleted successfully');
     }
 }

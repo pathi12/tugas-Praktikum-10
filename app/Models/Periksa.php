@@ -9,7 +9,7 @@ class Periksa extends Model
 {
     use HasFactory;
     // Nama tabel yang digunakan
-    protected $table = 'periksas';
+    protected $table = 'periksa';
 
     // Kolom yang dapat diisi
     protected $fillable = [

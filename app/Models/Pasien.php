@@ -21,4 +21,7 @@ class Pasien extends Model
         'alamat',
     ];
 
+     // disable timestamps
+     public $timestamps = false;
+
 }

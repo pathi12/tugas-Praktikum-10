@@ -1,4 +1,4 @@
-@include('periksa.header')
+@include('admin.header')
 @include('admin.sidebar')
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h1 class="my-4">Jadwal Periksa</h1>
+                    <h1 class="my-4"> Periksa</h1>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -53,7 +53,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($jadwal_periksa as $periksa)
+                            @foreach ($periksa as $periksa)
                                 <tr>
                                     <td>{{ $periksa->id }}</td>
                                     <td>{{ $periksa->tgl }}</td>
@@ -70,7 +70,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    Tugas Prakitkum 11 || Diah ayu puspasari || 0110223052 || Teknik Informatika 2302
+                    Tugas Prakitkum 11 || Pathi || 0110223068|| Teknik Informatika 2302
                 </div>
                 <!-- /.card-footer-->
             </div>

@@ -12,8 +12,8 @@ class PeriksaController extends Controller
      */
     public function index()
     {
-        $periksa = Periksa::get();
-        return view('periksa.index', (compact('jadwal_periksa')));
+        $periksa = periksa::get();
+        return view('periksa.index', (compact('periksa')));
     }
 
     /**

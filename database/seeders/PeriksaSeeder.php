@@ -16,8 +16,8 @@ class PeriksaSeeder extends Seeder
         Periksa::insert([
             [
                 'tgl' => '2024-06-01',
-                'berat' => '67 kg',
-                'tinggi' => '176 cm',
+                'berat' => '67',
+                'tinggi' => '176',
                 'tensi' => '120',
                 'keterangan' => 'Perlu pemeriksaan lebih lanjut',
                 'id_pasien' => '1',
@@ -25,8 +25,8 @@ class PeriksaSeeder extends Seeder
             ],
             [
                 'tgl' => '2024-06-05',
-                'berat' => '40 kg',
-                'tinggi' => '155 cm',
+                'berat' => '40',
+                'tinggi' => '155',
                 'tensi' => '133',
                 'keterangan' => 'Perlu pemeriksaan lebih lanjut',
                 'id_pasien' => '2',
